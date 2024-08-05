@@ -5,8 +5,13 @@ import json
 def index(request):
     res = requests.get("https://api.coindesk.com/v1/bpi/currentprice.json")
     data = res.json()
+    houre = data['time']['updated']
+    price = data['bpi']['EUR']['rate_float']
+    prixfcfa = price* 655
+    prixcom = price * 495
     return render(request, 'bitcoin/index.html', {
-        #"houre": data['time']['updated'],
-        "price": data['bpi']['EUR']['rate_float'],
-        
+        'houre': houre,
+        'price': price,
+        'pricefc': prixfcfa,
+        'pricecom': prixcom,
     })
