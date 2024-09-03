@@ -1,12 +1,9 @@
 from django.shortcuts import render
-<<<<<<< HEAD
-import datetime
-=======
 from django import forms
 from django.urls import reverse
 from datetime import datetime
 from django.http import HttpResponseRedirect
->>>>>>> 2ac7a19cdec4f15dda4c1481ad219e48ede29057
+
 
 # Create your views here.
 
@@ -19,12 +16,7 @@ class blogform(forms.Form):
 
 
 def index(request):
-<<<<<<< HEAD
-    now = datetime.datetime.now()
-    return render(request, "blog/index.html", {
-        "newyear": now.month == 1 and now.day == 1
-    })
-=======
+
     return render(request, "blog/index.html", {
         "a": a,
     })
@@ -49,4 +41,4 @@ def add(request):
     
     
     
->>>>>>> 2ac7a19cdec4f15dda4c1481ad219e48ede29057
+

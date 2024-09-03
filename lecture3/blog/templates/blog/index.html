@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-{% extends 'blog/base.html' %}
-    {% block body %}
-        {% if newyear %}
-        <h1>Happy New Year!</h1>
-        {% else %}
-        <h1>Hello World! iT'S NOT !</h1>
-        {% endif %}
-        <!-- <script src="" async defer></script> --> 
-
-    {%endblock%}
-</html>
-=======
 {%extends "blog/base.html"%}
 
 {%block content%}
@@ -23,4 +10,4 @@
 
 <a href = "{%url 'blog:add' %}">add blogs</a>
 {%endblock%}
->>>>>>> 2ac7a19cdec4f15dda4c1481ad219e48ede29057
+
