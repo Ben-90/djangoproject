@@ -1,0 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/*   npx tailwindcss -i ./srcTailwind/input.css -o ./static/newyear/css/style.css --watch  */

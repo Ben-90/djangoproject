@@ -1,0 +1,16 @@
+{%extends 'blog/base.html'%}
+
+{%block content%}
+
+
+<h2>Add blog</h2>
+<form action = "{% url 'blog:add' %}" method = "post">
+    {% csrf_token %}
+    {{form}}
+    <button type="submit">Add</button>
+</form>
+<a href = "{%url 'blog:index' %}">see blogs</a>
+
+
+
+{%endblock%}

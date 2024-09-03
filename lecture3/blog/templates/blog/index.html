@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {% extends 'blog/base.html' %}
     {% block body %}
         {% if newyear %}
@@ -9,3 +10,17 @@
 
     {%endblock%}
 </html>
+=======
+{%extends "blog/base.html"%}
+
+{%block content%}
+
+{%for article in a %}
+<ol>
+    <li>{{article}}</br>
+</ol>
+{%endfor%}
+
+<a href = "{%url 'blog:add' %}">add blogs</a>
+{%endblock%}
+>>>>>>> 2ac7a19cdec4f15dda4c1481ad219e48ede29057

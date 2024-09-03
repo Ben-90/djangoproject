@@ -1,8 +1,9 @@
+{% load static%}
 <!DOCTYPE <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+
 <html>
     <head>
         <meta charset="utf-8">
@@ -10,9 +11,10 @@
         <title>blog</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="{% static 'blog/css/style.css'%}"> 
     </head>
     <body>
+<<<<<<< HEAD
         {% block body %}
            <header class="container">
             <div class="headpage">
@@ -23,5 +25,22 @@
 
         {% endblock %}
 
+=======
+        <header class="container">
+                <div class="headpage">
+                    <h1 id="namepage" 
+                    class="bg-emerald-500 w-52 h-52 rounded-full shadow-2xl"> blog </h1>
+
+                    <h1 class="text-3xl font-bold underline">
+                        Hello world!
+                    </h1>
+
+                </div>
+        </header>
+        <main>
+            {% block content%}
+            {% endblock %}
+        </main>    
+>>>>>>> 2ac7a19cdec4f15dda4c1481ad219e48ede29057
     </body>
 </html>
