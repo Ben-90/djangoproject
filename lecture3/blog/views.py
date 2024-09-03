@@ -11,6 +11,7 @@ a = []
 
 class blogform(forms.Form):
     title = forms.CharField()
+    
     property = forms.CharField()
 
 
