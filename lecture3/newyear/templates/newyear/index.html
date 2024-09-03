@@ -11,18 +11,65 @@
         <title>salut</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="{% static 'newyear/style.css'%}"> 
-    </head>
+        <link rel="stylesheet" href="{% static 'newyear/css/style.css'%}"> 
+    </head>   
     <body>
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        
+    
         {% if newyear %}
-        <h1>Happy New Year!</h1>
+        <h1 >Happy New Year!</h1>
+        
+        <h2 class="text-3xl font-bold underline">
+            Hello world!
+        </h2>
+        
         {% else %}
         <h1>Hello World! iT'S NOT !</h1>
+        <h2 class="text-3xl font-bold underline">
+            Hello world, it's Tailwind!
+        </h2>
+        
         {% endif %}
         <!-- <script src="" async defer></script> --> 
-    </body>
+
+
+        <div class="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl">
+            <div class="md:flex">
+            <div class="p-8">
+                <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold">Company retreats</div>
+                <a href="#" class="block mt-1 text-lg leading-tight font-medium text-black hover:underline">Incredible accommodation for your team</a>
+                <p class="mt-2 text-slate-500">Looking to take your team away on a retreat to enjoy awesome food and take in some sunshine? We have a list of places to do just that.</p>
+            </div>
+            </div>
+        </div>
+
+        <div class="space-y-4">
+            <div class="w-96 bg-white shadow rounded">
+                w-96
+            </div>
+            <div class="w-80 bg-white shadow rounded">
+                w-80
+            </div>
+            <div class="w-72 bg-white shadow rounded">
+                w-72
+            </div>
+            <div class="w-64 bg-white shadow rounded">
+                w-64
+            </div>
+            <div class="w-60 bg-white shadow rounded">
+                w-60
+            </div>
+            <div class="w-56 bg-white shadow rounded">
+                w-56
+            </div>
+            <div class="w-52 bg-white shadow rounded">
+                w-52
+            </div>
+            <div class="w-48 bg-white shadow rounded">
+                w-48
+            </div>
+        </div>
+        
 </html>
