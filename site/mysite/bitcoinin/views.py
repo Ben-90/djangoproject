@@ -74,15 +74,9 @@ bible_chapters = {
 }
 
 def index(request):
-    l = "https://bible-api.com/"
-    lan = l + ecriture()
-    resq = requests.get(lan)
-    data1 = resq.json()
-    reference = data1['reference']
-    text = data1['reference'],data1['text']
-
     res = requests.get("https://api.coindesk.com/v1/bpi/currentprice.json")
     data = res.json()
+    ref = reference()
     houre = data['time']['updated']
     price = data['bpi']['EUR']['rate_float']
     prixfcfa = price* 655
@@ -92,8 +86,8 @@ def index(request):
         'price': price,
         'pricefc': prixfcfa,
         'pricecom': prixcom,
-        'reference': reference,
-        'text': text,
+        'reference': ref,
+
     })
 
 
@@ -106,5 +100,17 @@ def ecriture():
     else:
         return str(a[1]+"+"+a[0]+":"+str(b))
     
+def reference():
+    try:
+        l = "https://bible-api.com/"
+        lan = l + ecriture()
+        resq = requests.get(lan)
+        data1 = resq.json()
+        ref = data1['reference']
+        text = data1['text']
+    except KeyError:
+        print("Ne crains rien, car je suis avec toi; ne promene pas des regards inquiets, car je suis ton dieu ; je te fortifie, je viens à ton secours, je te soutiens de ma droite triomphante.")
+    else:
+        print(ref, text)
 
     
